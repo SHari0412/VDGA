@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -203,23 +204,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Qqk-w8-2Qz">
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Qqk-w8-2Qz">
                                 <rect key="frame" x="116" y="348" width="172" height="130"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name on Bank Account" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="26Z-b1-sZ8">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name on Bank Account" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="26Z-b1-sZ8">
                                         <rect key="frame" x="0.0" y="0.0" width="172" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Account Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NNN-vI-aQx">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Account Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NNN-vI-aQx">
                                         <rect key="frame" x="0.0" y="50" width="172" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Routing Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6kr-Zo-WGK">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Routing Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6kr-Zo-WGK">
                                         <rect key="frame" x="0.0" y="100" width="172" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -227,29 +227,45 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oW7-2w-7Oo">
-                                <rect key="frame" x="117.00000000000001" y="292" width="180.33333333333334" height="180"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7r-d9-GJh">
+                                <rect key="frame" x="335" y="604" width="59" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="XRh-YD-sV7"/>
+                                </constraints>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <segue destination="RPz-Jp-TuA" kind="show" id="Qh0-fx-JmH"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fq-hN-GSj">
+                                <rect key="frame" x="6" y="153" width="402" height="101"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="lMv-HO-i2A" id="VgO-2u-867"/>
+                                    <outlet property="delegate" destination="lMv-HO-i2A" id="npn-zO-6hr"/>
+                                </connections>
+                            </pickerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oW7-2w-7Oo">
+                                <rect key="frame" x="112" y="342" width="180.33333333333337" height="180"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name on Card" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xqc-9a-7am">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name on Card" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xqc-9a-7am">
                                         <rect key="frame" x="0.0" y="0.0" width="180.33333333333334" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" textContentType="name"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vqq-Yz-IVi">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vqq-Yz-IVi">
                                         <rect key="frame" x="0.0" y="50" width="180.33333333333334" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" textContentType="cc-number"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Expiration Date (MM/YY)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M8I-dr-eaZ">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Expiration Date (MM/YY)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M8I-dr-eaZ">
                                         <rect key="frame" x="0.0" y="100" width="180.33333333333334" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" textContentType="cc-number"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uqc-oe-8Jt">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uqc-oe-8Jt">
                                         <rect key="frame" x="0.0" y="150" width="180.33333333333334" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -257,24 +273,22 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7r-d9-GJh">
-                                <rect key="frame" x="335" y="604" width="59" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Submit"/>
-                                <connections>
-                                    <segue destination="RPz-Jp-TuA" kind="show" id="Qh0-fx-JmH"/>
-                                </connections>
-                            </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4fq-hN-GSj">
-                                <rect key="frame" x="6" y="153" width="402" height="101"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="lMv-HO-i2A" id="VgO-2u-867"/>
-                                    <outlet property="delegate" destination="lMv-HO-i2A" id="npn-zO-6hr"/>
-                                </connections>
-                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Qqk-w8-2Qz" firstAttribute="top" secondItem="4fq-hN-GSj" secondAttribute="bottom" constant="94" id="17T-ds-wKO"/>
+                            <constraint firstItem="4fq-hN-GSj" firstAttribute="leading" secondItem="CAl-2U-vXi" secondAttribute="leading" constant="6" id="2IW-2h-UtF"/>
+                            <constraint firstItem="oW7-2w-7Oo" firstAttribute="centerX" secondItem="Qqk-w8-2Qz" secondAttribute="centerX" id="4Tw-kk-8qz"/>
+                            <constraint firstItem="c7r-d9-GJh" firstAttribute="leading" secondItem="CAl-2U-vXi" secondAttribute="leading" constant="335" id="K8w-8G-Wwt"/>
+                            <constraint firstItem="4fq-hN-GSj" firstAttribute="top" secondItem="CAl-2U-vXi" secondAttribute="top" constant="89" id="MmS-M2-HFC"/>
+                            <constraint firstItem="CAl-2U-vXi" firstAttribute="bottom" secondItem="oW7-2w-7Oo" secondAttribute="bottom" constant="214" id="Oxd-wO-VBY"/>
+                            <constraint firstItem="oW7-2w-7Oo" firstAttribute="leading" secondItem="CAl-2U-vXi" secondAttribute="leading" constant="112" id="WSC-c3-Ajs"/>
+                            <constraint firstItem="CAl-2U-vXi" firstAttribute="bottom" secondItem="c7r-d9-GJh" secondAttribute="bottom" constant="63" id="XJs-4W-WtP"/>
+                            <constraint firstItem="c7r-d9-GJh" firstAttribute="trailing" secondItem="sfj-Ha-daI" secondAttribute="trailingMargin" id="h9S-f3-Ml7"/>
+                            <constraint firstItem="4fq-hN-GSj" firstAttribute="centerX" secondItem="sfj-Ha-daI" secondAttribute="centerX" id="kWa-ED-evW"/>
+                            <constraint firstItem="CAl-2U-vXi" firstAttribute="bottom" secondItem="Qqk-w8-2Qz" secondAttribute="bottom" constant="258" id="m0e-e4-Nmv"/>
+                            <constraint firstItem="oW7-2w-7Oo" firstAttribute="top" secondItem="4fq-hN-GSj" secondAttribute="bottom" constant="88" id="o17-4P-cC9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="CAl-2U-vXi"/>
                     </view>
                     <navigationItem key="navigationItem" id="OD8-pl-OhR"/>
@@ -488,7 +502,6 @@
         <image name="visa gift card" width="384" height="230"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rgk-Hm-fpc"/>
         <segue reference="DeH-4y-2hb"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

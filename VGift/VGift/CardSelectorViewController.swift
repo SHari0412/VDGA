@@ -58,11 +58,17 @@ class CardSelectorViewController: UIViewController, UITableViewDataSource, UITab
         }
     }
 
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Select Card Image"
+        
         // Do any additional setup after loading the view.
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
