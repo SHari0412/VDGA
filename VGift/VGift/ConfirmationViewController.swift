@@ -14,6 +14,7 @@ class ConfirmationViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Gift Card Sent!"
         // Do any additional setup after loading the view.
+        self.navigationItem.hidesBackButton = true
     }
 
     override func didReceiveMemoryWarning() {

@@ -14,6 +14,8 @@ class FundingViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         return 1
     }
     
+    @IBOutlet weak var achFunding: UIStackView!
+    @IBOutlet weak var ccFunding: UIStackView!
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return fundingTypes.count
     }
@@ -22,6 +24,18 @@ class FundingViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         return fundingTypes[row]
     }
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        switch row {
+        case 0:
+            ccFunding.isHidden = false
+            achFunding.isHidden = true
+        case 1:
+            ccFunding.isHidden = true
+            achFunding.isHidden = false
+        default:
+            print("default")  
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

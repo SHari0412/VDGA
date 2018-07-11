@@ -10,12 +10,13 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet weak var deliveryDatePicker: UIDatePicker!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.barTintColor = UIColor.white
         self.navigationController?.navigationBar.tintColor = UIColor.blue
-        
+        deliveryDatePicker.minimumDate = NSDate() as Date
     }
     
     override func viewDidLoad() {
