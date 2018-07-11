@@ -11,6 +11,8 @@
 		0649E3AD20F5278100A6E1BD /* GiftCardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0649E3AC20F5278100A6E1BD /* GiftCardType.swift */; };
 		0649E3AF20F537EC00A6E1BD /* CustomCardImageViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0649E3AE20F537EC00A6E1BD /* CustomCardImageViewTableViewCell.swift */; };
 		066C058620F58CFF0051BD84 /* SendGiftCardRequestPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066C058520F58CFF0051BD84 /* SendGiftCardRequestPayload.swift */; };
+		066C058820F5A2600051BD84 /* GiftCardSendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066C058720F5A2600051BD84 /* GiftCardSendController.swift */; };
+		066C058A20F5A3AA0051BD84 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066C058920F5A3AA0051BD84 /* LoginViewController.swift */; };
 		0672114D20F5493D001316C5 /* GiftCardSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0672114C20F5493D001316C5 /* GiftCardSelector.swift */; };
 		0672114F20F5578A001316C5 /* GiftMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0672114E20F5578A001316C5 /* GiftMessageViewController.swift */; };
 		0672115120F557FA001316C5 /* FundingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0672115020F557FA001316C5 /* FundingViewController.swift */; };
@@ -29,6 +31,8 @@
 		0649E3AC20F5278100A6E1BD /* GiftCardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftCardType.swift; sourceTree = "<group>"; };
 		0649E3AE20F537EC00A6E1BD /* CustomCardImageViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCardImageViewTableViewCell.swift; sourceTree = "<group>"; };
 		066C058520F58CFF0051BD84 /* SendGiftCardRequestPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendGiftCardRequestPayload.swift; sourceTree = "<group>"; };
+		066C058720F5A2600051BD84 /* GiftCardSendController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftCardSendController.swift; sourceTree = "<group>"; };
+		066C058920F5A3AA0051BD84 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0672114C20F5493D001316C5 /* GiftCardSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftCardSelector.swift; sourceTree = "<group>"; };
 		0672114E20F5578A001316C5 /* GiftMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftMessageViewController.swift; sourceTree = "<group>"; };
 		0672115020F557FA001316C5 /* FundingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundingViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +84,8 @@
 				066C058520F58CFF0051BD84 /* SendGiftCardRequestPayload.swift */,
 				06F60F3220D874F90041D373 /* SecondViewController.swift */,
 				06F60F3420D874F90041D373 /* Main.storyboard */,
+				066C058920F5A3AA0051BD84 /* LoginViewController.swift */,
+				066C058720F5A2600051BD84 /* GiftCardSendController.swift */,
 				06A342B820F5678500B82E4B /* ConfirmationViewController.swift */,
 				0672115020F557FA001316C5 /* FundingViewController.swift */,
 				06F60F4220D87DA90041D373 /* CardSelectorViewController.swift */,
@@ -165,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				066C058A20F5A3AA0051BD84 /* LoginViewController.swift in Sources */,
 				06F60F3320D874F90041D373 /* SecondViewController.swift in Sources */,
 				0672114F20F5578A001316C5 /* GiftMessageViewController.swift in Sources */,
 				0649E3AF20F537EC00A6E1BD /* CustomCardImageViewTableViewCell.swift in Sources */,
@@ -176,6 +183,7 @@
 				066C058620F58CFF0051BD84 /* SendGiftCardRequestPayload.swift in Sources */,
 				0649E3AB20F50BFD00A6E1BD /* HistoryViewController.swift in Sources */,
 				0672114D20F5493D001316C5 /* GiftCardSelector.swift in Sources */,
+				066C058820F5A2600051BD84 /* GiftCardSendController.swift in Sources */,
 				06F60F3120D874F90041D373 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

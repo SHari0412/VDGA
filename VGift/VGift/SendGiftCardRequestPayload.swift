@@ -15,7 +15,7 @@ class SendGiftCardRequestPayload {
     var receiverName: String!
     var receiverPhone: String!
     var receiverEmail: String!
-    var giftAmount: Double!
+    var giftAmount: String!
     var giftMessage: String!
     var giftCardImage: String!
     var deliveryDate: NSDate!

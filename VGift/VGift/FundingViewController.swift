@@ -9,6 +9,9 @@
 import UIKit
 
 class FundingViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    var giftCardSendController: GiftCardSendController!
+    
     let fundingTypes = ["Credit card/Debit card","Bank account"]
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -48,6 +51,11 @@ class FundingViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? ConfirmationViewController {
+            destination.giftCardSendController = giftCardSendController
+        }
+    }
 
     /*
     // MARK: - Navigation

@@ -12,6 +12,7 @@ class CardSelectorViewController: UIViewController, UITableViewDataSource, UITab
     
     @IBOutlet weak var collectionsView: UITableView!
     
+     var giftCardSendController: GiftCardSendController!
     
     let occasions = GiftCardSelector.occasions
         
@@ -50,10 +51,10 @@ class CardSelectorViewController: UIViewController, UITableViewDataSource, UITab
             
             if let cell = sender as? CustomCardImageViewTableViewCell, let indexPath = collectionsView.indexPath(for: cell) {
             
-        destination.selectedImage = UIImageView(image: UIImage(named: occasions[indexPath.section].cardImageName[indexPath.row]))
+        giftCardSendController.sendGift.giftCardImage = occasions[indexPath.section].cardImageName[indexPath.row]
                 
-                destination.selectedImageName =  occasions[indexPath.section].cardImageName[indexPath.row]
-                destination.giftMessageText = occasions[indexPath.section].message
+                giftCardSendController.sendGift.giftMessage = occasions[indexPath.section].message
+                destination.giftCardSendController = giftCardSendController
         }
         }
     }

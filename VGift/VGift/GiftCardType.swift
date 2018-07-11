@@ -23,8 +23,8 @@ enum OccasionMessage : String {
 }
 
 struct GiftCardType {
-    var occasion: Occasion
-    var message: String
-    var cardImageName: [String]
+    var occasion: Occasion!
+    var message: String!
+    var cardImageName: [String]!
     
 }

@@ -22,7 +22,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XWk-MD-QXQ">
                                 <rect key="frame" x="326" y="621" width="32" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Next"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.17809925130000001" green="0.24491779029999999" blue="0.89687904789999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="next:" destination="9pv-A4-QxB" eventType="touchUpInside" id="7QK-ii-4Nl"/>
                                     <segue destination="7Hb-7s-e4U" kind="show" id="A9T-23-o6x"/>
@@ -84,7 +86,7 @@
                         <outlet property="giftAmount" destination="WxS-QM-cti" id="mfJ-4V-Qrd"/>
                         <outlet property="recepientPhone" destination="z6n-EF-Qk3" id="Hg9-f3-Tnm"/>
                         <outlet property="recipientEmail" destination="lg9-Z1-O5i" id="WY9-fU-KdW"/>
-                        <outlet property="recipientName" destination="z6n-EF-Qk3" id="RMx-LF-pgr"/>
+                        <outlet property="recipientName" destination="wYj-bs-jfM" id="Cxz-xD-jaL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -168,19 +170,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ziu-H5-oRh">
-                                <rect key="frame" x="345" y="661" width="32" height="30"/>
+                                <rect key="frame" x="345" y="626" width="32" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Next"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.17809925130000001" green="0.24491779029999999" blue="0.89687904789999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="lMv-HO-i2A" kind="show" id="t6H-Yh-Wft"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8K-44-1o1">
-                                <rect key="frame" x="34" y="661" width="59" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Previous"/>
-                                <connections>
-                                    <segue destination="VDK-gi-C0k" kind="show" id="DeH-4y-2hb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -205,7 +201,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Qqk-w8-2Qz">
-                                <rect key="frame" x="116" y="348" width="172" height="130"/>
+                                <rect key="frame" x="116" y="299" width="172" height="130"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name on Bank Account" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="26Z-b1-sZ8">
                                         <rect key="frame" x="0.0" y="0.0" width="172" height="30"/>
@@ -227,25 +223,8 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7r-d9-GJh">
-                                <rect key="frame" x="335" y="604" width="59" height="69"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="69" id="XRh-YD-sV7"/>
-                                </constraints>
-                                <state key="normal" title="Submit"/>
-                                <connections>
-                                    <segue destination="RPz-Jp-TuA" kind="show" id="Qh0-fx-JmH"/>
-                                </connections>
-                            </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fq-hN-GSj">
-                                <rect key="frame" x="6" y="153" width="402" height="101"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="lMv-HO-i2A" id="VgO-2u-867"/>
-                                    <outlet property="delegate" destination="lMv-HO-i2A" id="npn-zO-6hr"/>
-                                </connections>
-                            </pickerView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oW7-2w-7Oo">
-                                <rect key="frame" x="112" y="342" width="180.33333333333337" height="180"/>
+                                <rect key="frame" x="112.00000000000001" y="293" width="180.33333333333337" height="180"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name on Card" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xqc-9a-7am">
                                         <rect key="frame" x="0.0" y="0.0" width="180.33333333333334" height="30"/>
@@ -273,6 +252,25 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fq-hN-GSj">
+                                <rect key="frame" x="6" y="153" width="402" height="52"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="lMv-HO-i2A" id="VgO-2u-867"/>
+                                    <outlet property="delegate" destination="lMv-HO-i2A" id="npn-zO-6hr"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7r-d9-GJh">
+                                <rect key="frame" x="335" y="591" width="59" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="XRh-YD-sV7"/>
+                                </constraints>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" red="0.17809925130000001" green="0.24491779029999999" blue="0.89687904789999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="RPz-Jp-TuA" kind="show" id="Qh0-fx-JmH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -308,9 +306,28 @@
                     <view key="view" contentMode="scaleToFill" id="ksn-sl-zck">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B7i-FY-XVT">
+                                <rect key="frame" x="87" y="192" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Congratulation on the successfull deilivery of your Gift Card" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="21" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kio-FH-RhJ">
+                                <rect key="frame" x="58" y="420" width="336" height="187"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.17809925130000001" green="0.24491779029999999" blue="0.89687904789999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="kj6-8s-pD9"/>
                     </view>
+                    <connections>
+                        <outlet property="confirmationMessage" destination="kio-FH-RhJ" id="Wbh-mq-QIY"/>
+                        <outlet property="giftSent" destination="B7i-FY-XVT" id="Zi3-ed-Ggv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qmS-PC-Y40" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -381,7 +398,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sjq-X3-6W5">
                                 <rect key="frame" x="314" y="626" width="38" height="30"/>
-                                <state key="normal" title="Login"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="bei-HU-rKL" kind="showDetail" id="jyn-bw-JiK"/>
                                 </connections>
@@ -409,10 +428,10 @@
             </objects>
             <point key="canvasLocation" x="-1323" y="14"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="Zsq-WA-ujy">
             <objects>
-                <viewController id="bei-HU-rKL" sceneMemberID="viewController">
+                <viewController id="bei-HU-rKL" customClass="LoginViewController" customModule="VGift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FWD-xk-LFp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -421,6 +440,7 @@
                                 <rect key="frame" x="0.0" y="26" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.17809925130000001" green="0.24491779029999999" blue="0.89687904789999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.17809925130000001" green="0.24491779029999999" blue="0.89687904789999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem title="VGift" id="Uew-4Z-2WF"/>
                                 </items>
@@ -442,7 +462,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFm-h0-Wx8">
                                 <rect key="frame" x="339" y="309" width="38" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Login"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.17809925130000001" green="0.24491779029999999" blue="0.89687904789999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="49e-Tb-3d3" kind="show" id="X5R-4Q-Ble"/>
                                 </connections>
@@ -451,6 +473,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="odt-NB-Mew"/>
                     </view>
+                    <connections>
+                        <outlet property="userName" destination="LSQ-0f-a7J" id="oZN-Y9-d7S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YHa-4S-yrU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -501,8 +526,5 @@
         <image name="visa" width="471" height="166"/>
         <image name="visa gift card" width="384" height="230"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="DeH-4y-2hb"/>
-    </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

@@ -9,6 +9,8 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    var giftCardSendController: GiftCardSendController!
+    
     @IBOutlet weak var deliveryDatePicker: UIDatePicker!
     
     @IBOutlet weak var recipientName: UITextField!
@@ -26,6 +28,25 @@ class FirstViewController: UIViewController {
         deliveryDatePicker.minimumDate = NSDate() as Date
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        giftCardSendController = GiftCardSendController()
+        giftCardSendController.sendGift.senderName = "Mary Smith"
+        giftCardSendController.sendGift.senderEmail = "Mary.smith@visa.com"
+        giftCardSendController.sendGift.senderPhone = "7200000012"
+        giftCardSendController.sendGift.deliveryDate = deliveryDate.date as NSDate
+        giftCardSendController.sendGift.receiverName = recipientName.text
+        giftCardSendController.sendGift.receiverEmail = recipientEmail.text
+        
+        giftCardSendController.sendGift.receiverPhone = recepientPhone.text
+       giftCardSendController.sendGift.giftAmount = giftAmount.text
+        
+        
+        
+        if let cardSelectorViewController = segue.destination as? CardSelectorViewController {
+            cardSelectorViewController.giftCardSendController = giftCardSendController
+        }
+        
+    }
     @IBAction func next(_ sender: Any) {
         
         //let defaults =  NSUserDefaults.

@@ -10,18 +10,17 @@ import UIKit
 
 class GiftMessageViewController: UIViewController {
 
-    var giftMessageText: String!
-    var selectedImageName: String!
+    var giftCardSendController: GiftCardSendController!
+    
     
     @IBOutlet weak var giftMessage: UITextView!
     @IBOutlet weak var selectedImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Gift Card Message"
-        print(giftMessageText!)
-        print(selectedImageName!)
-        giftMessage.text = giftMessageText!
-        selectedImage.image = UIImage(named: selectedImageName!)
+        
+        giftMessage.text = giftCardSendController.sendGift.giftMessage!
+        selectedImage.image = UIImage(named: giftCardSendController.sendGift.giftCardImage!)
         
         
         // Do any additional setup after loading the view.
@@ -32,7 +31,16 @@ class GiftMessageViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        giftCardSendController.sendGift.giftMessage = giftMessage.text
+        
+        
+        if let destination = segue.destination as? FundingViewController {
+            destination.giftCardSendController = giftCardSendController
+        }
+            
+    }
     /*
     // MARK: - Navigation
 
