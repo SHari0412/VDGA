@@ -23,6 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
+                                    <action selector="next:" destination="9pv-A4-QxB" eventType="touchUpInside" id="7QK-ii-4Nl"/>
                                     <segue destination="7Hb-7s-e4U" kind="show" id="A9T-23-o6x"/>
                                 </connections>
                             </button>
@@ -77,7 +78,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Send a Gift" id="QVp-FH-JtD"/>
                     <connections>
+                        <outlet property="deliveryDate" destination="PeA-cB-Hwf" id="BUq-r3-f2K"/>
                         <outlet property="deliveryDatePicker" destination="PeA-cB-Hwf" id="Wqm-ne-W8l"/>
+                        <outlet property="giftAmount" destination="WxS-QM-cti" id="mfJ-4V-Qrd"/>
+                        <outlet property="recepientPhone" destination="z6n-EF-Qk3" id="Hg9-f3-Tnm"/>
+                        <outlet property="recipientEmail" destination="lg9-Z1-O5i" id="WY9-fU-KdW"/>
+                        <outlet property="recipientName" destination="z6n-EF-Qk3" id="RMx-LF-pgr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>

@@ -2,7 +2,7 @@
 //  CardSelectorViewController.swift
 //  VGift
 //
-//  Created by Sathya Hirudayaswamy on 6/18/18.
+//  Created by Aruna Srinivasalu on 7/10/18.
 //  Copyright © 2018 Aruna Srinivasalu. All rights reserved.
 //
 
@@ -52,8 +52,8 @@ class CardSelectorViewController: UIViewController, UITableViewDataSource, UITab
             
         destination.selectedImage = UIImageView(image: UIImage(named: occasions[indexPath.section].cardImageName[indexPath.row]))
                 
-//                destination.selectedImage.image! = UIImage(named: occasions[indexPath.section].cardImageName[indexPath.row])!
-//                destination.giftMessage.text! = occasions[indexPath.section].message
+                destination.selectedImageName =  occasions[indexPath.section].cardImageName[indexPath.row]
+                destination.giftMessageText = occasions[indexPath.section].message
         }
         }
     }

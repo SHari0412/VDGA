@@ -2,7 +2,7 @@
 //  GiftMessageViewController.swift
 //  VGift
 //
-//  Created by Sathya Hirudayaswamy on 7/10/18.
+//  Created by Aruna Srinivasalu on 7/10/18.
 //  Copyright © 2018 Aruna Srinivasalu. All rights reserved.
 //
 
@@ -10,12 +10,19 @@ import UIKit
 
 class GiftMessageViewController: UIViewController {
 
+    var giftMessageText: String!
+    var selectedImageName: String!
     
     @IBOutlet weak var giftMessage: UITextView!
     @IBOutlet weak var selectedImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Gift Card Message"
+        print(giftMessageText!)
+        print(selectedImageName!)
+        giftMessage.text = giftMessageText!
+        selectedImage.image = UIImage(named: selectedImageName!)
+        
         
         // Do any additional setup after loading the view.
     }

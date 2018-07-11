@@ -2,7 +2,7 @@
 //  ConfirmationViewController.swift
 //  VGift
 //
-//  Created by Sathya Hirudayaswamy on 7/10/18.
+//  Created by Aruna Srinivasalu on 7/10/18.
 //  Copyright © 2018 Aruna Srinivasalu. All rights reserved.
 //
 
