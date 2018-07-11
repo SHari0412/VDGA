@@ -24,19 +24,12 @@
                                     <constraint firstAttribute="height" constant="77" id="JNK-3l-fZU"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Welcome to VGift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xSH-C2-1qJ">
-                                <rect key="frame" x="95" y="319" width="184" height="29"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="24"/>
-                                <color key="textColor" red="0.088095084721241626" green="0.12114623349920232" blue="0.44363261010362698" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="lvv-SX-JOD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="aeD-wc-PU4"/>
                             <constraint firstItem="lvv-SX-JOD" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="dWO-z9-xIq"/>
                             <constraint firstItem="lvv-SX-JOD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="85" id="dyb-dh-k9m"/>
-                            <constraint firstItem="lvv-SX-JOD" firstAttribute="centerX" secondItem="xSH-C2-1qJ" secondAttribute="centerX" id="qiL-FJ-7NY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
